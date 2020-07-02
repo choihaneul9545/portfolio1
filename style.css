@@ -93,15 +93,19 @@ p {
 /* Navbar */
 #navbar {
   width: 100%;
-  position: sticky;
-  top: 0;
-  background-color: var(--color-skyblue);
+  position: fixed;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--color-black);
   padding: 10px;
-  z-index: 999;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-skyblue);
+  padding: 8px;
 }
 
 .navbar__logo {
