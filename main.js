@@ -19,13 +19,20 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-  scrollIntoView('#contact');
+  scrollIntoView(link);
 });
 
 // Click Button contact me scroll to Contact menu
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
+});
+
+//Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 function scrollIntoView(selecter) {

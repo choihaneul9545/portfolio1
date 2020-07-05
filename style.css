@@ -159,6 +159,11 @@ p {
   text-align: center;
 }
 
+#home.home--fade {
+  opacity: 0.5;
+  animation: all var(--animation-duration) ease-in;
+}
+
 .home__avatar {
   width: 250px;
   height: 250px;
